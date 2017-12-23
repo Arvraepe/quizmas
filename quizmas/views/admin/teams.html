@@ -91,7 +91,6 @@
             $('#create-team-btn').click(function (){
                 var value = $('#create-team-input').val();
                 var number = $('#create-team-input-table').val();
-                console.log(number);
                 if (value) {
                     Quizmas.createTeam(value, number).then(clearInputFields).then(showAllTeams);
                 }

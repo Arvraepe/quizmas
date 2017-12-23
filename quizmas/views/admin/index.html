@@ -186,7 +186,6 @@
                 var backup = $("#back-up-select option:selected").val();
 
                 if (backup) {
-                    console.log(backup);
                     Quizmas.restoreToBackup(backup).then(update);
                 }
             });

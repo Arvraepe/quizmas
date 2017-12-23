@@ -81,7 +81,6 @@ const save = () => fs.writeFileSync(dir + '/api/data/data.json', JSON.stringify(
 
 
 const getAllBackups = () => {
-    console.log(dir + '/api/data/back-ups', fs.readdirSync(dir + '/api/data/back-ups'));
     return fs.readdirSync(dir + '/api/data/back-ups').map((f) => f.replace(/\.[^/.]+$/, ""));
 };
 

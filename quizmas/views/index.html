@@ -147,7 +147,6 @@
                 $('#result-container').html('');
 
                 results[index].forEach(function (team, $index){
-                    console.log(team);
                     $('<p />', {
                         html: `${$index+ (10*index) +1}. ${team.name} (${team.score})`
                     }).appendTo('#result-container');

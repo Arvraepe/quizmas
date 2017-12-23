@@ -94,7 +94,6 @@
             $('#create-round-btn').click(function (){
                     var value = $('#create-round-input').val();
                     if (value) {
-                        console.log(value);
                         Quizmas.createRound(value).then(clearInputFields).then(showAllRounds);
                     }
             });
