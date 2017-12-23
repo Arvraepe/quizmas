@@ -12,7 +12,9 @@ global.dir = path.resolve(__dirname);
 const Express = require('express');
 const App = Express();
 const BodyParser = require('body-parser');
+const Cors = require('cors');
 
+App.use(Cors());
 App.use(Express.static('views'));
 App.use(BodyParser.json());
 
@@ -20,4 +22,4 @@ require('routes/QuizRoutes')(App);
 require('routes/TeamRoutes')(App);
 require('routes/RoundRoutes')(App);
 
-App.listen(8080, () => console.log('Quizmas App Launched'));
+App.listen(9911, () => console.log('Quizmas App Launched'));
