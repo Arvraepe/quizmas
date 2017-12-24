@@ -91,7 +91,10 @@
 
                     $('<span />', {
                         class: 'score-round-header',
-                        html: `TB`
+                        html: `TB`,
+                        css: {
+                            width: '100px'
+                        }
                     }).appendTo('#scores-header');
 
                     everything.rounds.sort(stringSort).forEach(function (round) {
@@ -109,7 +112,7 @@
 
                         $('<span />', {
                             id: 'team-'+team.id+'-tiebreaker',
-                            html: `<input class="score-input" id="score-${team.id}-tiebreaker" type="text" value="${team.tiebreaker}" />`
+                            html: `<input style="width: 100px;" class="score-input" id="score-${team.id}-tiebreaker" type="text" value="${team.tiebreaker}" />`
                         }).appendTo('#team-'+team.id);
 
                         $(`#score-${team.id}-tiebreaker`).blur(function () {
